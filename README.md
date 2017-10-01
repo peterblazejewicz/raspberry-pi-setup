@@ -123,6 +123,47 @@ sudo systemctl stop vncserver-x11-serviced.service
 sudo systemctl disable vncserver-x11-serviced.service
 ```
 
+## Install Vim
+
+```bash
+sudo apt-get install vim
+```
+
+## Enable USB access
+
+- Edit `config.txt`:
+
+```bash
+cd /boot/
+vim config.txt
+```
+
+Add a line on the end:
+
+```text
+dtoverlay=dwc2
+```
+
+- Creaty empty `ssh` file if not yet created in `/boot/` directory:
+
+```bash
+touch ssh
+```
+
+- Edit `cmdline.txt`:
+
+```bash
+vim cmdline.txt
+```
+
+Add a config item `modules-load=dwc2,g_ether` after `rootwait`:
+
+```text
+rootwait modules-load=dwc2,g_ether
+```
+
+## Change a hostname and default password!!!
+
 ## Author
 
 @peterblazejewicz
