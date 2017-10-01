@@ -85,6 +85,44 @@ sudo apt-get dist-upgrade
 sudo apt-get clean
 ```
 
+## Enabling VNC Server
+
+- Install/Reinstall VNC server in one go:
+
+```bash
+sudo apt-get update
+sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
+```
+
+- Enable VNC server in `raspi-config`:
+
+```bash
+sudo raspi-config
+```
+
+> Interfacing Options > VNC > Would you like the VNC Server to be enabled? > Yes
+> The VNC Server is enabled
+
+Let the PI reboot
+
+- Start VNC server manually:
+
+```bash
+sudo systemctl start vncserver-x11-serviced.service
+```
+
+- Stop VNC manually:
+
+```bash
+sudo systemctl stop vncserver-x11-serviced.service
+```
+
+- To stop VNC server from running at boot:
+
+```bash
+sudo systemctl disable vncserver-x11-serviced.service
+```
+
 ## Author
 
 @peterblazejewicz
