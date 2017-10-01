@@ -34,6 +34,36 @@ network={
 touch ssh
 ```
 
+## Connecting
+
+### Verify WIFI
+
+```bash
+ping -c 3 raspberrypi.local
+PING raspberrypi.local (192.168.1.20): 56 data bytes
+64 bytes from 192.168.1.20: icmp_seq=0 ttl=64 time=12.041 ms
+64 bytes from 192.168.1.20: icmp_seq=1 ttl=64 time=19.085 ms
+64 bytes from 192.168.1.20: icmp_seq=2 ttl=64 time=11.659 ms
+
+--- raspberrypi.local ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 11.659/14.262/19.085/3.414 ms
+```
+
+### Connect via SSH
+
+```bash
+ssh pi@raspberrypi.local
+```
+
+Default password: **raspberry**
+
+You could eventually update your SSH fingerprints:
+
+```bash
+ssh-keygen -R raspberrypi.local
+ssh pi@raspberrypi.local
+```
 
 ## Author
 
