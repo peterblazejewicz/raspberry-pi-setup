@@ -65,6 +65,26 @@ ssh-keygen -R raspberrypi.local
 ssh pi@raspberrypi.local
 ```
 
+### Update/Upgrade setup
+
+- Update
+
+```bash
+sudo apt-get update
+```
+
+- Then Upgrade
+
+```bash
+sudo apt-get dist-upgrade
+```
+
+- [Optional] Cleanup
+
+```bash
+sudo apt-get clean
+```
+
 ## Author
 
 @peterblazejewicz
