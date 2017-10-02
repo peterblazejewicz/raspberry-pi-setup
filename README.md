@@ -204,6 +204,14 @@ sudo /etc/init.d/hostname.sh
 sudo reboot
 ```
 
+## Password Change
+
+> This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+```bash
+passwd
+```
+
 ## Author
 
 @peterblazejewicz
