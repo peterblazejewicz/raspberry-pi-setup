@@ -168,8 +168,6 @@ The content of `cmdline.txt` after modification:
 dwc_otg.lpm_enable=0 console=serial0,115200 console=tty1 root=PARTUUID=4cc82cbf-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait modules-load=dwc2,g_ether quiet splash plymouth.ignore-serial-consoles
 ```
 
-## Change a hostname and default password!!!
-
 ## Docker support
 
 Docker support is now official with Raspbian Jessie:
@@ -189,6 +187,21 @@ Verify installation:
 
 ```bash
 sudo docker run hello-world
+```
+
+## Hostname Change
+
+```bash
+sudo vim /etc/hosts
+```
+
+```bash
+sudo vim /etc/hostname
+```
+
+```bash
+sudo /etc/init.d/hostname.sh
+sudo reboot
 ```
 
 ## Author
