@@ -170,6 +170,27 @@ dwc_otg.lpm_enable=0 console=serial0,115200 console=tty1 root=PARTUUID=4cc82cbf-
 
 ## Change a hostname and default password!!!
 
+## Docker support
+
+Docker support is now official with Raspbian Jessie:
+
+```bash
+SUPPORT_MAP="
+...
+armv6l-raspbian-jessie
+...
+```
+
+```bash
+curl -sSL https://get.docker.com | sh
+```
+
+Verify installation:
+
+```bash
+sudo docker run hello-world
+```
+
 ## Author
 
 @peterblazejewicz
