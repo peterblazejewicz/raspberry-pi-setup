@@ -135,7 +135,7 @@ sudo apt-get install vim
 
 ```bash
 cd /boot/
-vim config.txt
+sudo vim config.txt
 ```
 
 Add a line on the end:
@@ -153,13 +153,19 @@ touch ssh
 - Edit `cmdline.txt`:
 
 ```bash
-vim cmdline.txt
+sudo vim cmdline.txt
 ```
 
 Add a config item `modules-load=dwc2,g_ether` after `rootwait`:
 
 ```text
 rootwait modules-load=dwc2,g_ether
+```
+
+The content of `cmdline.txt` after modification:
+
+```text
+dwc_otg.lpm_enable=0 console=serial0,115200 console=tty1 root=PARTUUID=4cc82cbf-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait modules-load=dwc2,g_ether quiet splash plymouth.ignore-serial-consoles
 ```
 
 ## Change a hostname and default password!!!
