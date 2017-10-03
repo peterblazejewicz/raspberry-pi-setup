@@ -2,6 +2,10 @@
 
 Setting up a Raspberry PI (macOS)
 
+## Topics
+
+Flashing OS, Boot Configuration, WIFI, SSH, Updates, Upgrades, Space Cleanup, VNC Server (RealVNC), Vim, USB Access, Docker, NodeJS, Hostname, Password
+
 ## Flashing OS
 
 [https://etcher.io/](https://etcher.io/)
