@@ -189,6 +189,14 @@ Verify installation:
 sudo docker run hello-world
 ```
 
+## Node Support
+
+This will install latest version (https://github.com/sdesalas/node-pi-zero):
+
+```bash
+wget -O - https://raw.githubusercontent.com/sdesalas/node-pi-zero/master/install-node-v.last.sh | bash
+```
+
 ## Hostname Change
 
 ```bash
