@@ -236,18 +236,54 @@ ping -c 3 google.com
 
 ## Audio
 
-Alsamixer:
+### Setup
+
+- Write down your plugged device card and device number:
 
 ```bash
-alsamixer
+arecord -l
 ```
 
-Using Soundblaster USB card (playback/record)
+- Write down your plugged device card and device number:
 
 ```bash
-speaker-test -c2 -D plughw:1,0
+aplay -l
 ```
 
+- create and edit configuration in `/home/pi`:
+
+```bash
+touch /home/pi/.asoundrc
+sudo vim /home/pi/.asoundrc
+```
+
+- add default configuration for sound interface based on previous steps results. Example for Sound Blaster Audio card:
+
+```text
+pcm.!default {
+  type asym
+  capture.pcm "mic"
+  playback.pcm "speaker"
+}
+pcm.mic {
+  type plug
+  slave {
+    pcm "hw:1,0"
+  }
+}
+pcm.speaker {
+  type plug
+  slave {
+    pcm "hw:1,0"
+  }
+}
+```
+
+Verify setup by running `speaker-test`:
+
+```bash
+speaker-test -t wav
+```
 
 ## Author
 
