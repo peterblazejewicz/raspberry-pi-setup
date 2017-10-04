@@ -4,7 +4,7 @@ Setting up a Raspberry PI (macOS)
 
 ## Topics
 
-Flashing OS, Boot Configuration, WIFI, SSH, Updates, Upgrades, Space Cleanup, VNC Server (RealVNC), Vim, USB Access, Docker, NodeJS, Hostname, Password
+Flashing OS, Boot Configuration, WIFI, SSH, Updates, Upgrades, Space Cleanup, VNC Server (RealVNC), Vim, USB Access, Docker, NodeJS, Hostname, Password, Network Connection over USB
 
 ## Flashing OS
 
@@ -222,6 +222,16 @@ sudo reboot
 
 ```bash
 passwd
+```
+
+## Network Connection Over USB
+
+On your Mac OS go to `>System Preferences > Sharing`, select correction interface in `Share your connection from` dropdown. Then select `To Computer Using` > `RNDIS/Ethernet Gadget` and finally enable `Internet Sharing` service.
+
+Verify connection from your Raspberry PI:
+
+```bash
+ping -c 3 google.com
 ```
 
 ## Author
