@@ -4,7 +4,7 @@ Setting up a Raspberry PI (macOS)
 
 ## Topics
 
-Flashing OS, Boot Configuration, WIFI, SSH, Updates, Upgrades, Space Cleanup, VNC Server (RealVNC), Vim, USB Access, Docker, NodeJS, Hostname, Password, Network Connection over USB
+Flashing OS, Boot Configuration, WIFI, SSH, Updates, Upgrades, Space Cleanup, VNC Server (RealVNC), Vim, USB Access, Docker, NodeJS, Hostname, Password, Network Connection over USB, Audio
 
 ## Flashing OS
 
@@ -233,6 +233,21 @@ Verify connection from your Raspberry PI:
 ```bash
 ping -c 3 google.com
 ```
+
+## Audio
+
+Alsamixer:
+
+```bash
+alsamixer
+```
+
+Using Soundblaster USB card (playback/record)
+
+```bash
+speaker-test -c2 -D plughw:1,0
+```
+
 
 ## Author
 
