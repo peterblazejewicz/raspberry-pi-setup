@@ -127,11 +127,27 @@ sudo systemctl stop vncserver-x11-serviced.service
 sudo systemctl disable vncserver-x11-serviced.service
 ```
 
-## Install Vim
+## Vim
+
+### Install Vim
 
 ```bash
 sudo apt-get install vim
 ```
+
+### Syntax Highlighting in Vim
+
+```txt
+" Vim5 and later versions support syntax highlighting. Uncommenting the next
+" line enables syntax highlighting by default.
+"syntax on
+```
+
+```bash
+sudo vim /etc/vim/vimrc
+```
+
+and removes quotes before `syntax on`.
 
 ## Enable USB access
 
