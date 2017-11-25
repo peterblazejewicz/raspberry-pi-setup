@@ -149,6 +149,62 @@ sudo vim /etc/vim/vimrc
 
 and removes quotes before `syntax on`.
 
+### Plugin Manager for Vim
+
+The [vim-plug](https://github.com/junegunn/vim-plug) is used here.
+
+#### Installation
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Now configure `Vim` configuration file to support plugins with `vim-plug`:
+
+```.virmrc
+" Star of plugin section
+" Specify a directory for plugins
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+" Make sure you use single quotes
+
+" Initialize plugin system
+call plug#end()
+" end of plugin section
+```
+
+Example setup:
+
+```.vimrc
+" Star of plugin section
+" Specify a directory for plugins
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+" Make sure you use single quotes
+
+Plug 'scrooloose/syntastic'
+
+Plug 'tpope/vim-fugitive'
+
+Plug 'pangloss/vim-javascript'
+
+Plug 'scrooloose/nerdtree'
+
+Plug 'tpope/vim-surround'
+
+Plug 'bling/vim-airline'
+
+Plug 'flazz/vim-colorschemes'
+
+" Initialize plugin system
+call plug#end()
+" end of plugin section
+```
+For details see: [`vim-plug` installation](https://github.com/junegunn/vim-plug#installation)
+
+![Vim with plugins](https://user-images.githubusercontent.com/14539/33233250-05242628-d213-11e7-82c0-2753e6ccdc70.png)
+
 ## Enable USB access
 
 - Edit `config.txt`:
