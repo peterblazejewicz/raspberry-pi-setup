@@ -429,6 +429,24 @@ Verify setup by running `speaker-test`:
 speaker-test -t wav
 ```
 
+## MongoDB
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install mongodb-server
+```
+
+To allow connection from other machine [bind to local network address](https://docs.mongodb.com/manual/reference/configuration-options/):
+
+```bash
+sudo vim /etc/mongodb.conf
+```
+
+```txt
+bind_ip = 127.0.0.1,192.168.1.13
+```
+
 ## Author
 
 @peterblazejewicz
