@@ -323,9 +323,7 @@ yarn --version
 
 ## Hostname Change
 
-```bash
-sudo vim /etc/hosts
-```
+Edit configuraction file:
 
 ```bash
 sudo vim /etc/hostname
