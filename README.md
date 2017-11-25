@@ -273,6 +273,54 @@ This will install latest version (https://github.com/sdesalas/node-pi-zero):
 wget -O - https://raw.githubusercontent.com/sdesalas/node-pi-zero/master/install-node-v.last.sh | bash
 ```
 
+This will produce:
+
+```bash
+wget -O - https://raw.githubusercontent.com/sdesalas/node-pi-zero/master/install-node-v.last.sh | bash
+--2017-11-25 18:05:45--  https://raw.githubusercontent.com/sdesalas/node-pi-zero/master/install-node-v.last.sh
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.112.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.112.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1703 (1.7K) [text/plain]
+Saving to: ‘STDOUT’
+
+-                                       100%[===============================================================================>]   1.66K  --.-KB/s   in 0.001s
+
+2017-11-25 18:05:46 (1.26 MB/s) - written to stdout [1703/1703]
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   99k  100   99k    0     0  75234      0  0:00:01  0:00:01 --:--:-- 75282
+--2017-11-25 18:05:48--  https://nodejs.org/dist/v9.2.0/node-v9.2.0-linux-armv6l.tar.gz
+Resolving nodejs.org (nodejs.org)... 104.20.23.46, 104.20.22.46, 2400:cb00:2048:1::6814:172e, ...
+Connecting to nodejs.org (nodejs.org)|104.20.23.46|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 16896011 (16M) [application/gzip]
+Saving to: ‘node-v9.2.0-linux-armv6l.tar.gz’
+
+node-v9.2.0-linux-armv6l.tar.gz         100%[===============================================================================>]  16.11M   878KB/s   in 27s
+
+2017-11-25 18:06:16 (619 KB/s) - ‘node-v9.2.0-linux-armv6l.tar.gz’ saved [16896011/16896011]
+```
+
+```bash
+$ node --version
+v9.2.0
+```
+
+### Yarn support
+
+The generic installation script works without a problem. See [Yarn Installation](https://yarnpkg.com/en/docs/install#alternatives-tab):
+
+```bash
+curl -o- -L https://yarnpkg.com/install.sh | bash
+```
+
+```bash
+yarn --version
+1.3.2
+```
+
 ## Hostname Change
 
 ```bash
