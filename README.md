@@ -447,6 +447,31 @@ sudo vim /etc/mongodb.conf
 bind_ip = 127.0.0.1,192.168.1.13
 ```
 
+## Services Status Check
+
+If you installed any component as a service and you are interested to check their current status:
+
+```bash
+sudo service {SERVICE_NAME} status
+```
+
+or list all services statuses:
+
+```bash
+sudo service --status-all
+```
+
+Here it lists `MongoDB` service as not running:
+
+```bash
+ [ + ]  kmod
+ [ + ]  lightdm
+ [ - ]  mongodb
+ [ - ]  motd
+ [ - ]  mountall-bootclean.sh
+ [ - ]  mountall.sh
+ ```
+
 ## Author
 
 @peterblazejewicz
