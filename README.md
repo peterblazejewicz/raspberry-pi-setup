@@ -21,7 +21,7 @@ vim wpa_supplicant.conf
 
 ### WiFi
 
-#### Content of `wpa_supplicant.conf`:
+#### Content of `wpa_supplicant.conf`
 
 ```text
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -36,7 +36,7 @@ network={
 
 #### Disable WiFi on boot
 
-Add a line `dtoverlay=pi3-disable-wifi` to boot configuration:
+On device with built-in WiFi add a line `dtoverlay=pi3-disable-wifi` to boot configuration:
 
 ```bash
 cd /Volumes/boot
