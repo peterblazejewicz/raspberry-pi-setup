@@ -19,7 +19,9 @@ touch wpa_supplicant.conf
 vim wpa_supplicant.conf
 ```
 
-### Content of `wpa_supplicant.conf`:
+### WiFi
+
+#### Content of `wpa_supplicant.conf`:
 
 ```text
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -31,6 +33,17 @@ network={
     scan_ssid=1
 }
 ```
+
+#### Disable WiFi on boot
+
+Add a line `dtoverlay=pi3-disable-wifi` to boot configuration:
+
+```bash
+cd /Volumes/boot
+sudo vim config.txt
+```
+
+Ref.: [https://git.io/vFje3](https://git.io/vFje3)
 
 ### Enable SSH
 
