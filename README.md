@@ -45,6 +45,19 @@ sudo vim config.txt
 
 Ref.: [https://git.io/vFje3](https://git.io/vFje3)
 
+### Bluetooth
+
+#### Disable Bluetooth on boot
+
+On device with built-in Bluetooth add a line `dtoverlay=pi3-disable-bt` to boot configuration:
+
+```bash
+cd /Volumes/boot
+sudo vim config.txt
+```
+
+Ref.: [dtoverlay=pi3-disable-bt](dtoverlay=pi3-disable-bt)
+
 ### Enable SSH
 
 ```bash
