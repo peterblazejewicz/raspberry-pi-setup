@@ -495,6 +495,17 @@ Mem:           434        284        149          4         20        173
 Swap:         2047          0       2047
 ```
 
+## Update Python version
+
+Ref.: [Installing Python 3.6 on Raspbian](https://gist.github.com/dschep/24aa61672a2092246eaca2824400d37f)
+
+## Install TMUX
+
+[tmux wiki](https://github.com/tmux/tmux/wiki)
+When using SSH you could detach current session to background using `tmux`:
+
+[tmux cheatsheet](https://gist.github.com/MohamedAlaa/2961058)
+
 ## Author
 
 @peterblazejewicz
