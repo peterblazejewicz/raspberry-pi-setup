@@ -472,6 +472,29 @@ Here it lists `MongoDB` service as not running:
  [ - ]  mountall.sh
  ```
 
+## Increase Swap File Size
+
+ Sometimes when compiling from the source it is usefull to increase swap file size for the duration of the build:
+
+ ```bash
+sudo vim /etc/dphys-swapfile
+```
+
+Change from defualt `CONF_SWAPSIZE=100` to `CONF_SWAPSIZE=2048`
+
+Restart swap file service:
+
+```bash
+sudo /etc/init.d/dphys-swapfile stop
+sudo /etc/init.d/dphys-swapfile start
+...
+free -m
+             total       used       free     shared    buffers     cached
+Mem:           434        284        149          4         20        173
+-/+ buffers/cache:         90        343
+Swap:         2047          0       2047
+```
+
 ## Author
 
 @peterblazejewicz
