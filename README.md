@@ -506,6 +506,15 @@ When using SSH you could detach current session to background using `tmux`:
 
 [tmux cheatsheet](https://gist.github.com/MohamedAlaa/2961058)
 
+## Backup SD Card
+
+```bash
+sudo dd if=/dev/disk2 of=~/Desktop/backup.dmg
+```
+
+where `/dev/disk2` is a name of a mounted sd card, `~/Desktop/backup.dmg` is a location of the backup file to be created.
+After the backup image has been created use Etcher to flush it to new sd card.
+
 ## Author
 
 @peterblazejewicz
