@@ -302,6 +302,45 @@ logout
 
 (and start your terminal session again, e.g. using SSH)
 
+### Example Dockerfile built and run on device
+
+Here is an example of using custom built Docker image to use Blinkt pHAT:
+
+```Dockerfile
+FROM resin/rpi-raspbian:jessie
+
+# dependencies
+RUN apt-get update -qy
+RUN apt-get install -qy python3
+RUN apt-get install -qy python3-pip
+RUN apt-get install -qy python3-rpi.gpio
+# Cancel out any Entrypoint already set in the base image.
+ENTRYPOINT []
+
+# Blinkt
+RUN apt-get install -qy python3-blinkt
+
+# app code dependecies
+
+RUN pip3 install request
+
+WORKDIR /root/
+
+# COPY library  library
+# WORKDIR /root/library
+# RUN python3 setup.py install
+# RUN pip3 install request
+
+WORKDIR /root/
+COPY examples   examples
+WORKDIR /root/examples/
+# install app specific  requirements (can be cached already)
+RUN pip3 install -r requirements.txt
+# code
+CMD ["python3", "cheerlights.py"]
+```
+
+
 ## Node Support
 
 This will install latest version (https://github.com/sdesalas/node-pi-zero):
