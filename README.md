@@ -272,6 +272,8 @@ dwc_otg.lpm_enable=0 console=serial0,115200 console=tty1 root=PARTUUID=4cc82cbf-
 
 ## Docker support
 
+### Docker Installation
+
 Docker support is now official with Raspbian Jessie:
 
 ```bash
@@ -290,6 +292,15 @@ Verify installation:
 ```bash
 sudo docker run hello-world
 ```
+
+### Removing elevated requirement
+
+```bash
+sudo usermod pi -aG docker
+logout
+```
+
+(and start your terminal session again, e.g. using SSH)
 
 ## Node Support
 
