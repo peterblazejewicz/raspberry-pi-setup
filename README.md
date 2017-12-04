@@ -4,7 +4,9 @@ Setting up a Raspberry PI (macOS)
 
 ## Topics
 
-Flashing OS, Boot Configuration, WIFI, SSH, Updates, Upgrades, Space Cleanup, VNC Server (RealVNC), Vim, USB Access, Docker, NodeJS, Hostname, Password, Network Connection over USB, Audio
+Flashing OS, Boot Configuration, WIFI, SSH, Updates, Upgrades, Space Cleanup,
+VNC Server (RealVNC), Vim, USB Access, Docker, NodeJS, Hostname, Password,
+Network Connection over USB, Audio
 
 ## Flashing OS
 
@@ -36,7 +38,8 @@ network={
 
 #### Disable WiFi on boot
 
-On device with built-in WiFi add a line `dtoverlay=pi3-disable-wifi` to boot configuration:
+On device with built-in WiFi add a line `dtoverlay=pi3-disable-wifi` to boot
+configuration:
 
 ```bash
 cd /Volumes/boot
@@ -49,7 +52,8 @@ Ref.: [https://git.io/vFje3](https://git.io/vFje3)
 
 #### Disable Bluetooth on boot
 
-On device with built-in Bluetooth add a line `dtoverlay=pi3-disable-bt` to boot configuration:
+On device with built-in Bluetooth add a line `dtoverlay=pi3-disable-bt` to boot
+configuration:
 
 ```bash
 cd /Volumes/boot
@@ -97,19 +101,19 @@ ssh pi@raspberrypi.local
 
 ### Update/Upgrade setup
 
-- Update
+* Update
 
 ```bash
 sudo apt-get update
 ```
 
-- Then Upgrade
+* Then Upgrade
 
 ```bash
 sudo apt-get dist-upgrade
 ```
 
-- [Optional] Cleanup
+* [Optional] Cleanup
 
 ```bash
 sudo apt-get clean
@@ -117,14 +121,14 @@ sudo apt-get clean
 
 ## Enabling VNC Server
 
-- Install/Reinstall VNC server in one go:
+* Install/Reinstall VNC server in one go:
 
 ```bash
 sudo apt-get update
 sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
 ```
 
-- Enable VNC server in `raspi-config`:
+* Enable VNC server in `raspi-config`:
 
 ```bash
 sudo raspi-config
@@ -135,19 +139,19 @@ sudo raspi-config
 
 Let the PI reboot
 
-- Start VNC server manually:
+* Start VNC server manually:
 
 ```bash
 sudo systemctl start vncserver-x11-serviced.service
 ```
 
-- Stop VNC manually:
+* Stop VNC manually:
 
 ```bash
 sudo systemctl stop vncserver-x11-serviced.service
 ```
 
-- To stop VNC server from running at boot:
+* To stop VNC server from running at boot:
 
 ```bash
 sudo systemctl disable vncserver-x11-serviced.service
@@ -227,13 +231,15 @@ Plug 'flazz/vim-colorschemes'
 call plug#end()
 " end of plugin section
 ```
-For details see: [`vim-plug` installation](https://github.com/junegunn/vim-plug#installation)
+
+For details see:
+[`vim-plug` installation](https://github.com/junegunn/vim-plug#installation)
 
 ![Vim with plugins](https://user-images.githubusercontent.com/14539/33233250-05242628-d213-11e7-82c0-2753e6ccdc70.png)
 
 ## Enable USB access
 
-- Edit `config.txt`:
+* Edit `config.txt`:
 
 ```bash
 cd /boot/
@@ -246,13 +252,13 @@ Add a line on the end:
 dtoverlay=dwc2
 ```
 
-- Creaty empty `ssh` file if not yet created in `/boot/` directory:
+* Creaty empty `ssh` file if not yet created in `/boot/` directory:
 
 ```bash
 touch ssh
 ```
 
-- Edit `cmdline.txt`:
+* Edit `cmdline.txt`:
 
 ```bash
 sudo vim cmdline.txt
@@ -340,7 +346,6 @@ RUN pip3 install -r requirements.txt
 CMD ["python3", "cheerlights.py"]
 ```
 
-
 ## Node Support
 
 This will install latest version (https://github.com/sdesalas/node-pi-zero):
@@ -386,7 +391,8 @@ v9.2.0
 
 ### Yarn support
 
-The generic installation script works without a problem. See [Yarn Installation](https://yarnpkg.com/en/docs/install#alternatives-tab):
+The generic installation script works without a problem. See
+[Yarn Installation](https://yarnpkg.com/en/docs/install#alternatives-tab):
 
 ```bash
 curl -o- -L https://yarnpkg.com/install.sh | bash
@@ -412,7 +418,8 @@ sudo reboot
 
 ## Password Change
 
-> This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+> This is a security risk - please login as the 'pi' user and type 'passwd' to
+> set a new password.
 
 ```bash
 passwd
@@ -420,7 +427,9 @@ passwd
 
 ## Network Connection Over USB
 
-On your Mac OS go to `>System Preferences > Sharing`, select correction interface in `Share your connection from` dropdown. Then select `To Computer Using` > `RNDIS/Ethernet Gadget` and finally enable `Internet Sharing` service.
+On your Mac OS go to `>System Preferences > Sharing`, select correction
+interface in `Share your connection from` dropdown. Then select `To Computer
+Using` > `RNDIS/Ethernet Gadget` and finally enable `Internet Sharing` service.
 
 Verify connection from your Raspberry PI:
 
@@ -432,26 +441,27 @@ ping -c 3 google.com
 
 ### Setup
 
-- Write down your plugged device card and device number:
+* Write down your plugged device card and device number:
 
 ```bash
 arecord -l
 ```
 
-- Write down your plugged device card and device number:
+* Write down your plugged device card and device number:
 
 ```bash
 aplay -l
 ```
 
-- create and edit configuration in `/home/pi`:
+* create and edit configuration in `/home/pi`:
 
 ```bash
 touch /home/pi/.asoundrc
 sudo vim /home/pi/.asoundrc
 ```
 
-- add default configuration for sound interface based on previous steps results. Example for Sound Blaster Audio card:
+* add default configuration for sound interface based on previous steps results.
+  Example for Sound Blaster Audio card:
 
 ```text
 pcm.!default {
@@ -487,7 +497,8 @@ sudo apt-get upgrade
 sudo apt-get install mongodb-server
 ```
 
-To allow connection from other machine [bind to local network address](https://docs.mongodb.com/manual/reference/configuration-options/):
+To allow connection from other machine
+[bind to local network address](https://docs.mongodb.com/manual/reference/configuration-options/):
 
 ```bash
 sudo vim /etc/mongodb.conf
@@ -499,7 +510,8 @@ bind_ip = 127.0.0.1,192.168.1.13
 
 ## Services Status Check
 
-If you installed any component as a service and you are interested to check their current status:
+If you installed any component as a service and you are interested to check
+their current status:
 
 ```bash
 sudo service {SERVICE_NAME} status
@@ -520,13 +532,14 @@ Here it lists `MongoDB` service as not running:
  [ - ]  motd
  [ - ]  mountall-bootclean.sh
  [ - ]  mountall.sh
- ```
+```
 
 ## Increase Swap File Size
 
- Sometimes when compiling from the source it is usefull to increase swap file size for the duration of the build:
+Sometimes when compiling from the source it is usefull to increase swap file
+size for the duration of the build:
 
- ```bash
+```bash
 sudo vim /etc/dphys-swapfile
 ```
 
@@ -547,12 +560,13 @@ Swap:         2047          0       2047
 
 ## Update Python version
 
-Ref.: [Installing Python 3.6 on Raspbian](https://gist.github.com/dschep/24aa61672a2092246eaca2824400d37f)
+Ref.:
+[Installing Python 3.6 on Raspbian](https://gist.github.com/dschep/24aa61672a2092246eaca2824400d37f)
 
 ## Install TMUX
 
-[tmux wiki](https://github.com/tmux/tmux/wiki)
-When using SSH you could detach current session to background using `tmux`:
+[tmux wiki](https://github.com/tmux/tmux/wiki) When using SSH you could detach
+current session to background using `tmux`:
 
 [tmux cheatsheet](https://gist.github.com/MohamedAlaa/2961058)
 
@@ -562,8 +576,9 @@ When using SSH you could detach current session to background using `tmux`:
 sudo dd if=/dev/disk2 of=~/Desktop/backup.dmg
 ```
 
-where `/dev/disk2` is a name of a mounted sd card, `~/Desktop/backup.dmg` is a location of the backup file to be created.
-After the backup image has been created use Etcher to flush it to new sd card.
+where `/dev/disk2` is a name of a mounted sd card, `~/Desktop/backup.dmg` is a
+location of the backup file to be created. After the backup image has been
+created use Etcher to flush it to new sd card.
 
 ## Author
 
