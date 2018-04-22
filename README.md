@@ -26,9 +26,11 @@ vim wpa_supplicant.conf
 #### Content of `wpa_supplicant.conf`
 
 ```text
-COUNTRY=PL
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface_group=netdev
 update_config=1
+country=PL
+ap_scan=1
 
 network={
     ssid="YOURSSID"
