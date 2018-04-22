@@ -576,10 +576,10 @@ current session to background using `tmux`:
 ## Backup SD Card
 
 ```bash
-sudo dd if=/dev/disk2 of=~/Desktop/backup.dmg
+sudo dd if=/dev/disk2 of=~/Desktop/backup.img
 ```
 
-where `/dev/disk2` is a name of a mounted sd card, `~/Desktop/backup.dmg` is a
+where `/dev/disk2` is a name of a mounted sd card, `~/Desktop/backup.img` is a
 location of the backup file to be created. After the backup image has been
 created use Etcher to flush it to new sd card.
 
