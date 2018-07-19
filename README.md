@@ -4,9 +4,8 @@ Setting up a Raspberry PI (macOS)
 
 ## Topics
 
-Flashing OS, Boot Configuration, WIFI, SSH, Updates, Upgrades, Space Cleanup,
-VNC Server (RealVNC), Vim, USB Access, Docker, NodeJS, Hostname, Password,
-Network Connection over USB, Audio
+[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#Boot-Configuration), [WIFI](#WIFI), [Bluetooth](#Bluetooth), [SSH](#Enable-SSH), [Updates](#Update/Upgrade-setup), [Upgrades](#Update/Upgrade-setup), [Space Cleanup](#Space-Cleanup),
+[VNC Server (RealVNC)](#Enabling-VNC-Server), [Vim](#Vim), [USB Access](#Enable-USB-access), [Docker](#Docker-support), [NodeJS](#Node-support), [Hostname](#Hostname-change), [Password](#Password-change), [Network Connection over USB](#Network-Connection-over-USB), [Audio](#Audio), [MongoDB](#MongoDB)
 
 ## Formatting SD card
 
@@ -35,7 +34,7 @@ Finished erase on disk2
 
 [https://etcher.io/](https://etcher.io/)
 
-## Modify boot configuration
+## Boot Configuration
 
 ```bash
  cd /Volumes/boot
