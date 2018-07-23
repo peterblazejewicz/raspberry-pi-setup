@@ -48,16 +48,13 @@ vim wpa_supplicant.conf
 #### Content of `wpa_supplicant.conf`
 
 ```text
-ctrl_interface=/var/run/wpa_supplicant
-ctrl_interface_group=netdev
+ctrl_interface=DIR=/var/run/wpa_supplicant
 update_config=1
 country=PL
-ap_scan=1
 
 network={
     ssid="YOURSSID"
     psk="YOURPASSWORD"
-    scan_ssid=1
 }
 ```
 
