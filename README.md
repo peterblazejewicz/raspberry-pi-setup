@@ -4,8 +4,8 @@ Setting up a Raspberry PI (macOS)
 
 ## Topics
 
-[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#Boot-Configuration), [WIFI](#WIFI), [Bluetooth](#Bluetooth), [SSH](#Enable-SSH), [Updates](#Update/Upgrade-setup), [Upgrades](#Update/Upgrade-setup), [Space Cleanup](#Space-Cleanup),
-[VNC Server (RealVNC)](#Enabling-VNC-Server), [Vim](#Vim), [USB Access](#Enable-USB-access), [Docker](#Docker-support), [NodeJS](#Node-support), [Hostname](#Hostname-change), [Password](#Password-change), [Network Connection over USB](#Network-Connection-over-USB), [Audio](#Audio), [MongoDB](#MongoDB)
+[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#boot-configuration), [WIFI](#wifi), [Bluetooth](#bluetooth), [SSH](#enable-ssh), [Updates](#updateupgrade-setup), [Upgrades](#updateupgrade-setup), [Space Cleanup](#space-cleanup),
+[VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb)
 
 ## Formatting SD card
 
