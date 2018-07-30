@@ -5,7 +5,7 @@ Setting up a Raspberry PI (macOS)
 ## Topics
 
 [Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#boot-configuration), [WIFI](#wifi), [Bluetooth](#bluetooth), [SSH](#enable-ssh), [OS Version Check](#os-version-check), [Updates](#updateupgrade-setup), [Upgrades](#updateupgrade-setup), [Space Cleanup](#space-cleanup),
-[VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb)
+[VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [TensorFlow](#tensorflow), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb)
 
 ## Formatting SD card
 
@@ -527,6 +527,20 @@ Verify setup by running `speaker-test`:
 
 ```bash
 speaker-test -t wav
+```
+
+## TensorFlow
+
+Google now ships precompiled wheels of the `TensorFlow` for both arm7/arm6 architecture. Look into dedicated docs. The `TensorFlow` is ready for use stright after installation.
+
+[Install TensorFlow on Raspbian](https://www.tensorflow.org/install/install_raspbian)
+
+> Python 2 version does not support precompiled wheels so expect longer installation
+
+```bash
+Collecting tensorflow
+  Downloading https://www.piwheels.org/simple/tensorflow/tensorflow-1.9.0-cp35-none-linux_armv6l.whl (62.8MB)
+    100% |████████████████████████████████| 62.8MB 1.4kB/s
 ```
 
 ## MongoDB
