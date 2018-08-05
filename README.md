@@ -4,7 +4,7 @@ Setting up a Raspberry PI (macOS)
 
 ## Topics
 
-[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#boot-configuration), [WIFI](#wifi), [Bluetooth](#bluetooth), [SSH](#enable-ssh), [OS Version Check](#os-version-check), [Updates](#updateupgrade-setup), [Upgrades](#updateupgrade-setup), [Space Cleanup](#space-cleanup), [Text Based Browsers](#text-based-browsers), [VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [TensorFlow](#tensorflow), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb)
+[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#boot-configuration), [WIFI](#wifi), [Bluetooth](#bluetooth), [SSH](#enable-ssh), [OS Version Check](#os-version-check), [Updates](#updateupgrade-setup), [Upgrades](#updateupgrade-setup), [Space Cleanup](#space-cleanup), [Text Based Browsers](#text-based-browsers), [VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [TensorFlow](#tensorflow), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb), [Running and Debugging Python Code](#running-and-debugging-python-code)
 
 ## Formatting SD card
 
@@ -653,6 +653,23 @@ sudo dd if=/dev/disk2 of=~/Desktop/backup.img
 where `/dev/disk2` is a name of a mounted sd card, `~/Desktop/backup.img` is a
 location of the backup file to be created. After the backup image has been
 created use Etcher to flush it to new sd card.
+
+## Running And Debugging Python Code
+
+When using PyCharm you can configure it to:
+
+* sync your local changes with remote device
+* run/debug on remote device
+
+[Remote Development on Raspberry Pi](https://nathanpjones.com/2016/02/remote-debug-gpio-on-raspberry-pi/)
+
+When installing dependencies native to Linux (e.g. one that requires GPIO) you could:
+
+```bash
+pip install blinkt --no-deps
+```
+
+The same option works in PyCharm install library dialog. This allows to develop on machine without native features that are specific to device.
 
 ## Author
 
