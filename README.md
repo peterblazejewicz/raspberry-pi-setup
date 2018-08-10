@@ -4,7 +4,7 @@ Setting up a Raspberry PI (macOS)
 
 ## Topics
 
-[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#boot-configuration), [WIFI](#wifi), [Bluetooth](#bluetooth), [SSH](#enable-ssh), [OS Version Check](#os-version-check), [Updates](#updateupgrade-setup), [Upgrades](#updateupgrade-setup), [Space Cleanup](#space-cleanup), [Text Based Browsers](#text-based-browsers), [VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [TensorFlow](#tensorflow), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb), [Running and Debugging Python Code](#running-and-debugging-python-code)
+[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#boot-configuration), [WIFI](#wifi), [Bluetooth](#bluetooth), [SSH](#enable-ssh), [OS Version Check](#os-version-check), [Updates](#updateupgrade-setup), [Upgrades](#updateupgrade-setup), [Space Cleanup](#space-cleanup), [Text Based Browsers](#text-based-browsers), [VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [TensorFlow](#tensorflow), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb), [Running and Debugging Python Code](#running-and-debugging-python-code), [SSH Chrome Extension](#ssh-chrome-extension)
 
 ## Formatting SD card
 
@@ -670,6 +670,14 @@ pip install blinkt --no-deps
 ```
 
 The same option works in PyCharm install library dialog. This allows to develop on machine without native features that are specific to device.
+
+## SSH Chrome Extension
+
+You can connet to your PI device from any other device using Chrome and Google's SSH app extension:
+
+[Secure Shell App](https://chrome.google.com/webstore/detail/secure-shell-app/pnhechapfaindjhompbnflcldabbghjo)
+
+![Secure Shell App Image](https://lh3.googleusercontent.com/gfecjGFvIsMxm_l0KKHiHRutVpea9XXJMYZzkacT-mQEE95sLp_JKChjF1jY6Prt2yl1jggC=w640-h400-e365)
 
 ## Author
 
