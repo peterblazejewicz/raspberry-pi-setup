@@ -4,7 +4,7 @@ Setting up a Raspberry PI (macOS)
 
 ## Topics
 
-[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#boot-configuration), [WIFI](#wifi), [Bluetooth](#bluetooth), [SSH](#enable-ssh), [OS Version Check](#os-version-check), [Updates](#updateupgrade-setup), [Upgrades](#updateupgrade-setup), [Space Cleanup](#space-cleanup), [Text Based Browsers](#text-based-browsers), [VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [TensorFlow](#tensorflow), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb), [Running and Debugging Python Code](#running-and-debugging-python-code), [SSH Chrome Extension](#ssh-chrome-extension)
+[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#boot-configuration), [WIFI](#wifi), [Bluetooth](#bluetooth), [SSH](#enable-ssh), [OS Version Check](#os-version-check), [Updates](#updateupgrade-setup), [Upgrades](#updateupgrade-setup), [Space Cleanup](#space-cleanup), [Text Based Browsers](#text-based-browsers), [VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [TensorFlow](#tensorflow), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb), [Running and Debugging Python Code](#running-and-debugging-python-code), [SSH Chrome Extension](#ssh-chrome-extension), [PiCamera Stream](#picamera-stream)
 
 ## Formatting SD card
 
@@ -678,6 +678,22 @@ You can connet to your PI device from any other device using Chrome and Google's
 [Secure Shell App](https://chrome.google.com/webstore/detail/secure-shell-app/pnhechapfaindjhompbnflcldabbghjo)
 
 ![Secure Shell App Image](https://lh3.googleusercontent.com/gfecjGFvIsMxm_l0KKHiHRutVpea9XXJMYZzkacT-mQEE95sLp_JKChjF1jY6Prt2yl1jggC=w640-h400-e365)
+
+## PiCamera Stream
+
+Below is verified to be working:
+
+```sh
+raspivid -o - -n -fps 45 -w 640 -h 480 -vf -hf -t 0 -vs -fli auto | cvlc -vvv stream:///dev/stdin --sout '#rtp{sdp=rtsp://:8554/}' :demux=h264 :h264-fps=45
+```
+
+Requires FLV installed on Raspberry
+
+Note: be aware of FPS ranges required by PiCamera setup and GPU, otherwise you could get cryptic error messages in process output:
+
+[Sensor Modes](https://picamera.readthedocs.io/en/release-1.13/fov.html#sensor-modes)
+
+> The requested framerate should be within the range of the sensor mode.
 
 ## Author
 
