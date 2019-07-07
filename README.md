@@ -408,6 +408,36 @@ CMD ["python3", "cheerlights.py"]
 
 ## Node Support
 
+### RaspberryPi
+
+Add support for official relase packages:
+
+```bash
+curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+```
+
+To install Node and NPM:
+
+```bash
+sudo apt-get install -y nodejs
+```
+
+You would probably need this dev tools for some native extensions:
+
+```bash
+sudo apt-get install gcc g++ make
+```
+
+If you need Yarn:
+
+```bash
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+```
+
+### PiZero
+
 This will install latest version (https://github.com/sdesalas/node-pi-zero):
 
 ```bash
