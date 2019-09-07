@@ -4,7 +4,7 @@ Setting up a Raspberry PI (macOS)
 
 ## Topics
 
-[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#boot-configuration), [WIFI](#wifi), [Bluetooth](#bluetooth), [SSH](#enable-ssh), [OS Version Check](#os-version-check), [Updates](#updateupgrade-setup), [Upgrades](#updateupgrade-setup), [Space Cleanup](#space-cleanup), [Text Based Browsers](#text-based-browsers), [VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [TensorFlow](#tensorflow), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb), [Running and Debugging Python Code](#running-and-debugging-python-code), [SSH Chrome Extension](#ssh-chrome-extension), [PiCamera Stream](#picamera-stream)
+[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#boot-configuration), [WIFI](#wifi), [Bluetooth](#bluetooth), [SSH](#enable-ssh), [OS Version Check](#os-version-check), [Updates](#updateupgrade-setup), [Upgrades](#updateupgrade-setup), [Space Cleanup](#space-cleanup), [Text Based Browsers](#text-based-browsers), [VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [TensorFlow](#tensorflow), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb), [Running and Debugging Python Code](#running-and-debugging-python-code), [SSH Chrome Extension](#ssh-chrome-extension), [PiCamera Stream](#picamera-stream), [GitHub](#github)
 
 ## Formatting SD card
 
@@ -724,6 +724,35 @@ Note: be aware of FPS ranges required by PiCamera setup and GPU, otherwise you c
 [Sensor Modes](https://picamera.readthedocs.io/en/release-1.13/fov.html#sensor-modes)
 
 > The requested framerate should be within the range of the sensor mode.
+
+## GitHub
+
+### Credentials
+
+When using closing repositories from GitHub using `https` option one can enable credential cache on the terminal:
+
+```bash
+$ git config --global credential.helper cache
+# Set git to use the credential memory cache
+
+$ git config --global credential.helper 'cache --timeout=3600'
+# Set the cache to timeout after 1 hour (setting is in seconds)
+```
+
+See: [Caching your GitHub password in Git](https://help.github.com/en/articles/caching-your-github-password-in-git)
+
+### Account
+
+```bash
+# gets the username from global config
+git config --global user.name
+# sets the username in global config
+git config --global user.name "UserName"
+# gets the email from global config
+git config --global user.email
+# sets the email in global config
+git config --global user.name "username@users.noreply.github.com"
+```
 
 ## Author
 
