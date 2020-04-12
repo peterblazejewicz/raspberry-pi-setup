@@ -4,7 +4,32 @@ Setting up a Raspberry PI (macOS)
 
 ## Topics
 
-[Formatting SD card](#formattingsd-card), [Flashing OS](#flashing-os), [Boot Configuration](#boot-configuration), [WIFI](#wifi), [Bluetooth](#bluetooth), [SSH](#enable-ssh), [OS Version Check](#os-version-check), [Updates](#updateupgrade-setup), [Upgrades](#updateupgrade-setup), [Space Cleanup](#space-cleanup), [Text Based Browsers](#text-based-browsers), [VNC Server (RealVNC)](#enabling-vnc-server), [Vim](#vim), [USB Access](#enable-usb-access), [TensorFlow](#tensorflow), [Docker](#docker-support), [NodeJS](#node-support), [Hostname](#hostname-change), [Password](#password-change), [Network Connection over USB](#network-connection-over-usb), [Audio](#audio), [MongoDB](#mongodb), [Running and Debugging Python Code](#running-and-debugging-python-code), [SSH Chrome Extension](#ssh-chrome-extension), [PiCamera Stream](#picamera-stream), [GitHub](#github)
+- [Formatting SD card](#formattingsd-card)
+- [Flashing OS](#flashing-os)
+- [Boot Configuration](#boot-configuration)
+- [WIFI](#wifi)
+- [Bluetooth](#bluetooth)
+- [SSH](#enable-ssh)
+- [OS Version Check](#os-version-check)
+- [Updates](#updateupgrade-setup)
+- [Upgrades](#updateupgrade-setup)
+- [Space Cleanup](#space-cleanup)
+- [Text Based Browsers](#text-based-browsers)
+- [VNC Server (RealVNC)](#enabling-vnc-server)
+- [Vim](#vim)
+- [USB Access](#enable-usb-access)
+- [TensorFlow](#tensorflow)
+- [Docker](#docker-support)
+- [NodeJS](#node-support)
+- [Hostname](#hostname-change)
+- [Password](#password-change)
+- [Network Connection over USB](#network-connection-over-usb)
+- [Audio](#audio)
+- [MongoDB](#mongodb)
+- [Running and Debugging Python Code](#running-and-debugging-python-code)
+- [SSH Chrome Extension](#ssh-chrome-extension)
+- [PiCamera Stream](#picamera-stream)
+- [GitHub](#github)
 
 ## Formatting SD card
 
