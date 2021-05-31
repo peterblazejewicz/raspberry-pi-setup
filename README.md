@@ -67,6 +67,12 @@ touch wpa_supplicant.conf
 vim wpa_supplicant.conf
 ```
 
+```bash
+cd D:\
+ni -Type File wpa_supplicant.conf
+vim .\wpa_supplicant.conf
+```
+
 ### WiFi
 
 #### Content of `wpa_supplicant.conf`
@@ -112,6 +118,10 @@ Ref.: [dtoverlay=pi3-disable-bt](dtoverlay=pi3-disable-bt)
 
 ```bash
 touch ssh
+```
+
+```bash
+ni -Type File ssh
 ```
 
 ## Connecting
